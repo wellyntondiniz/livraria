@@ -22,4 +22,10 @@ public class CategoriaService {
 	public Categoria save(Categoria categoria) {
 		return categoriaRepository.save(categoria);
 	}
+	
+	public void delete(Integer id){
+		Categoria categoria = findById(id);
+		//TODO: Validar se existe
+		categoriaRepository.delete(categoria);
+	}
 }
